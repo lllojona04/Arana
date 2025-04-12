@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 3D Image Slider</title>
+  <link rel="stylesheet" href="./CSS 3D Image Slider_files/styles.css">
+  <style>
+    /* Estilos para el botón */
+    .btn-felicitar {
+      background-color: #4CAF50;
+      color: white;
+      font-size: 1.5rem;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-felicitar:hover {
+      background-color: #45a049;
+    }
+
+    /* Estilos para la carta de felicitación */
+    .carta {
+      display: none; /* Inicialmente oculta */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .carta-contenido {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    .carta-contenido h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .carta-contenido p {
+      font-size: 1.2em;
+      margin-bottom: 15px;
+    }
+
+    .carta-contenido button {
+      background-color: #f44336;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .carta-contenido button:hover {
+      background-color: #e53935;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="banner">
+      <div class="slider" style="--quantity: 10">
+        <div class="item" style="--position: 1">
+          <img src="./CSS 3D Image Slider_files/ARANA.png" alt="Image 1">
+        </div>
+        <div class="item" style="--position: 2">
+          <img src="./CSS 3D Image Slider_files/1 .jpg" alt="Image 2">
+        </div>
+        <div class="item" style="--position: 3">
+          <img src="./CSS 3D Image Slider_files/2.jpg" alt="Image 3">
+        </div>
+        <div class="item" style="--position: 4">
+          <img src="./CSS 3D Image Slider_files/3.jpg" alt="Image 4">
+        </div>
+        <div class="item" style="--position: 5">
+          <img src="./CSS 3D Image Slider_files/4.jpg" alt="Image 5">
+        </div>
+        <div class="item" style="--position: 6">
+          <img src="./CSS 3D Image Slider_files/images.png" alt="Image 6">
+        </div>
+        <div class="item" style="--position: 7">
+          <img src="./CSS 3D Image Slider_files/5efaf3ec-2a3c-4edf-9282-83d576ae.png" alt="Image 7">
+        </div>
+        <div class="item" style="--position: 8">
+          <img src="./CSS 3D Image Slider_files/17257396702832.png" alt="Image 8">
+        </div>
+        <div class="item" style="--position: 9">
+          <img src="./CSS 3D Image Slider_files/WV2ENDEG5ZECBGJVY2JFKF5C4Y.png" alt="Image 9">
+        </div>
+        <div class="item" style="--position: 10">
+          <img src="./CSS 3D Image Slider_files/Arana lesión Racing de Santander.png" alt="Image 10">
+        </div>
+      </div>
+
+      <div class="content">
+        <h1 data-content="Arana">Arana</h1>
+        <!-- Botón debajo de "Arana" -->
+        <button class="btn-felicitar" onclick="mostrarCarta()">¡Felicitar a Nohara!</button>
+      </div>
+
+      <!-- Carta de Felicitación -->
+      <div class="carta" id="cartaFelicitacion">
+        <div class="carta-contenido">
+          <h2>¡Hola Nohara!</h2>
+          <p>Espero que estés teniendo un gran día.</p>
+          <p>Te escribo porque, aunque no te conozco en persona, he estado siguiendo tu contenido en redes sociales y me ha impresionado mucho tu energía positiva y tu forma de ser.</p>
+          <p>Quiero aprovechar esta oportunidad para felicitarte por todo lo que haces. ¡Me encanta tu estilo y cómo compartes tu vida con todos!</p>
+          <p>Espero que sigas alcanzando tus sueños y que la vida te regale muchas más bendiciones.</p>
+          <p><strong>Con mucha admiración y cariño,</strong></p>
+          <p><strong>Jonathan.</strong></p>
+          <button onclick="cerrarCarta()">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Función para mostrar la carta de felicitación
+    function mostrarCarta() {
+      document.getElementById('cartaFelicitacion').style.display = 'flex';
+    }
+
+    // Función para cerrar la carta
+    function cerrarCarta() {
+      document.getElementById('cartaFelicitacion').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
